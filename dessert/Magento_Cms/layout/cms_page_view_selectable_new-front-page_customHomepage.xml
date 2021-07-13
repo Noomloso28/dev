@@ -1,0 +1,102 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+     <head>
+        <css src="css/bootstrap.min.css"/>
+        <css src="css/style.css"/>
+        <css src="css/responsive.css"/>
+        <meta name="format-detection" content="telephone=no"/>
+
+        <css src="css/jquery.mCustomScrollbar.min.css"/>
+
+
+        <css src="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" src_type="url" />
+        <css src="css/owl.carousel.min.css"/>
+        <css src="css/owl.theme.default.min.css"/>
+        <css src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" src_type="url" media="screen" />
+
+
+        <!--/*
+        * JavaScript
+        */ -->
+        <link src="js/popper.min.js" />
+        <link src="js/bootstrap.bundle.min.js" />
+        <link src="js/jquery-3.0.0.min.js" />
+        <link src="js/plugin.js" />
+        <link src="js/jquery.mCustomScrollbar.concat.min.js" />
+
+
+        <link src="js/custom.js" />
+        <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js" src_type="url" />
+
+
+    </head>
+
+
+    <referenceContainer name="header.container">
+          <container name="header.container.start" htmlTag="div" htmlClass="layout_padding banner_section_start" before="-">
+            <container name="header.container.start.header" htmlTag="div" htmlClass="header">
+
+                <container name="header.container.header.container" htmlTag="div" htmlClass="container">
+                    <container name="header.container.header.container.row" htmlTag="div" htmlClass="row">
+                        <container name="header.container.header.container.row.logo_section" htmlTag="div" htmlClass="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                            <container name="header.container.header.container.row.full" htmlTag="div" htmlClass="full">
+                                <container name="header.container.header.container.row.center-desk" htmlTag="div" htmlClass="center-desk">
+                                    <container name="header.container.header.container.row.logo" htmlTag="div" htmlClass="logo">
+
+                                    </container>
+                                </container>
+                            </container>
+                        </container>
+
+                        <container name="header.container.header.container.row.col9" htmlTag="div" htmlClass="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                            <container name="header.container.header.container.row.menu-area" htmlTag="div" htmlClass="menu-area">
+                                <container name="header.container.header.container.row.limit-box" htmlTag="div" htmlClass="limit-box">
+                                    <container name="header.container.header.container.row.main-menu" htmlTag="nav" htmlClass="main-menu">
+
+                                        <block class="Magento\Framework\View\Element\Template" name="homepage_navigation" template="Magento_Cms::homepage/navigation.phtml" />
+                                    </container>
+                                </container>
+                            </container>
+                        </container>
+
+                    </container>
+                </container>
+                
+            </container>    
+            
+          </container>
+      </referenceContainer>
+
+      <move element="logo" destination="header.container.header.container.row.logo" before="-" />
+
+
+    <referenceContainer name="main">
+        <container name="home.content" htmlTag="div" before="-">
+            <block class="Magento\Framework\View\Element\Template" name="block1" template="Magento_Cms::homepage/homepage.phtml">
+                <block name="content.section1" template="Magento_Cms::homepage/homepage-section1.phtml" />
+            </block>
+        </container>
+
+        <!--container htmlTag="div" htmlId="description-container-id" htmlClass="description-container-class">
+                <block class="Magento\Framework\View\Element\Template" name="block2" template="Magento_Cms::homepage/navigation.phtml" />
+        </container-->
+
+    </referenceContainer>
+
+    
+
+
+    <!--referenceContainer name="content">
+        <block class="Magento\Catalog\Block\Product\View\Description" name="homepage.homepage" template="Magento_Theme::homepage/homepage.phtml" before="-" />
+    </referenceContainer-->
+
+
+
+
+    <!--referenceBlock name="top.links" remove="true"/>
+    <referenceBlock name="top.search" remove="true"/>
+    <referenceBlock name="footer_links" remove="true"/-->       
+
+
+
+
+</page>
